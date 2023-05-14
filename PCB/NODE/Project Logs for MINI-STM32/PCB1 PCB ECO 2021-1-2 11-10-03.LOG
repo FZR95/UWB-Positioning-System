@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=KEY1 Pin=J6-6
+Removed Pin From Net: NetName=LED1 Pin=J7-18
+Removed Pin From Net: NetName=KEY1 Pin=U2-2
+Removed Pin From Net: NetName=LED1 Pin=U2-54
+Change Component Footprint: Designator=CON1 Old Footprint=USB_Micro-B New Footprint=MicroUSB
+Added Pin To Net: NetName=PC13 Pin=J6-6
+Added Pin To Net: NetName=PC13 Pin=U2-2
+Added Net: Name=PC13
+Added Pin To Net: NetName=PD2 Pin=J7-18
+Added Pin To Net: NetName=PD2 Pin=U2-54
+Added Net: Name=PD2
+Added Member To Class: ClassName=MINI-STM32 Member=Component C9 104
+Added Member To Class: ClassName=MINI-STM32 Member=Component U2 STM32F103RCT6

@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=PB7 Pin=P2-3
+Removed Pin From Net: NetName=PB6 Pin=P2-4
+Removed Pin From Net: NetName=PB5 Pin=P2-5
+Removed Pin From Net: NetName=PB4 Pin=P2-6
+Removed Pin From Net: NetName=PC12 Pin=P2-9
+Removed Pin From Net: NetName=PC11 Pin=P2-10
+Removed Pin From Net: NetName=PA15 Pin=P2-11
+Removed Pin From Net: NetName=PC10 Pin=P2-12
+Added Pin To Net: NetName=PA15 Pin=P2-3
+Added Pin To Net: NetName=PC10 Pin=P2-4
+Added Pin To Net: NetName=PC12 Pin=P2-5
+Added Pin To Net: NetName=PC11 Pin=P2-6
+Added Pin To Net: NetName=PB5 Pin=P2-9
+Added Pin To Net: NetName=PB4 Pin=P2-10
+Added Pin To Net: NetName=PB7 Pin=P2-11
+Added Pin To Net: NetName=PB6 Pin=P2-12
+Added Member To Class: ClassName=MINI-STM32 Member=Component P2 Header 9X2

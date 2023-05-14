@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=VCC3.3 Pin=J3-1
+Added Pin To Net: NetName=VCC3.3 Pin=P2-1
+Added Pin To Net: NetName=VCC3.3 Pin=P2-2
+Added Room: Name=MINI-STM32

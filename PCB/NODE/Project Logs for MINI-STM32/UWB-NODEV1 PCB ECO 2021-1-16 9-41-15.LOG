@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=RESET Pin=P2-1
+Removed Pin From Net: NetName=VCC3.3 Pin=P2-3
+Removed Pin From Net: NetName=VCC5 Pin=P2-5
+Removed Pin From Net: NetName=GND Pin=P2-7
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X7 New Footprint=HDR1X6
+Change Component Comment : Designator=P2 Old Comment=Header 7 New Comment=Header 6
+Added Component: Designator=RST(SW-SPST)
+Added Pin To Net: NetName=VCC3.3 Pin=P2-1
+Added Pin To Net: NetName=VCC5 Pin=P2-3
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=RESET Pin=RST-1
+Added Pin To Net: NetName=GND Pin=RST-2
+Added Member To Class: ClassName=MINI-STM32 Member=Component P2 Header 6
+Added Member To Class: ClassName=MINI-STM32 Member=Component RST SW-PB

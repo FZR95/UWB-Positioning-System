@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=CS Pin=U2-33
+Removed Pin From Net: NetName=PC6 Pin=U2-37
+Added Pin To Net: NetName=EXT Pin=U2-33
+Added Pin To Net: NetName=IO6 Pin=U2-34
+Added Pin To Net: NetName=WAKE Pin=U2-35
+Added Pin To Net: NetName=IO7 Pin=U2-36
+Added Pin To Net: NetName=RST' Pin=U2-37
+Change Net Name : Old Net Name=PA4 New Net Name=SPI1_CS
+Change Net Name : Old Net Name=PA5 New Net Name=SPI1_SCK
+Change Net Name : Old Net Name=PA6 New Net Name=SPI1_MISO
+Change Net Name : Old Net Name=PA7 New Net Name=SPI1_MOSI
+Added Pin To Net: NetName=SCK Pin=J1-3
+Added Net: Name=SCK
+Added Pin To Net: NetName=SDA Pin=J1-4
+Added Net: Name=SDA

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=IO4 Pin=U2-24
+Removed Pin From Net: NetName=IO5 Pin=U2-25
+Removed Pin From Net: NetName=IO6 Pin=U2-29
+Added Pin To Net: NetName=IO0 Pin=U2-24
+Added Pin To Net: NetName=IO1 Pin=U2-25
+Added Pin To Net: NetName=IO2 Pin=U2-29
+Added Room: Name=MINI-STM32

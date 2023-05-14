@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=RST' Pin=P3-3
+Removed Pin From Net: NetName=WAKEUP Pin=P3-4
+Removed Pin From Net: NetName=EXTON Pin=P3-5
+Change Component Footprint: Designator=P3 Old Footprint=HDR1X5 New Footprint=HDR1X6
+Change Component Comment : Designator=P3 Old Comment=Header 5 New Comment=Header 6
+Added Pin To Net: NetName=3V3 Pin=P3-3
+Added Pin To Net: NetName=RST' Pin=P3-4
+Added Pin To Net: NetName=WAKEUP Pin=P3-5
+Added Pin To Net: NetName=EXTON Pin=P3-6

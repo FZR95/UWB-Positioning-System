@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"twr.h": "c",
+			"usart.h": "c",
+			"led.h": "c",
+			"stm32f4xx.h": "c",
+			"ui.h": "c",
+			"xpt2046.h": "c",
+			"delay.h": "c",
+			"lcd.h": "c",
+			"trilateration_basic.h": "c",
+			"bsp_xpt2046_lcd.h": "c",
+			"bsp_ili9341_lcd.h": "c",
+			"sys.h": "c",
+			"dw1000.h": "c",
+			"deca_device_api.h": "c"
+		}
+	}
+}

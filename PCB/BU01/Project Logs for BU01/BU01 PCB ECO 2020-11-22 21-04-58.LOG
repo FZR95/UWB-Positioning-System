@@ -1,0 +1,47 @@
+Added Component: Designator=P1(HDR1X6)
+Added Component: Designator=P2(HDR1X8)
+Added Pin To Net: NetName=3V3 Pin=C1-5
+Added Pin To Net: NetName=3V3 Pin=C1-6
+Added Pin To Net: NetName=3V3 Pin=C1-7
+Added Net: Name=3V3
+Added Pin To Net: NetName=CLK Pin=C1-20
+Added Net: Name=CLK
+Added Pin To Net: NetName=CS' Pin=C1-17
+Added Net: Name=CS'
+Added Pin To Net: NetName=EXTON Pin=C1-1
+Added Net: Name=EXTON
+Added Pin To Net: NetName=GND Pin=C1-8
+Added Pin To Net: NetName=GND Pin=C1-16
+Added Pin To Net: NetName=GND Pin=C1-21
+Added Pin To Net: NetName=GND Pin=C1-23
+Added Pin To Net: NetName=GND Pin=C1-24
+Added Net: Name=GND
+Added Pin To Net: NetName=IO0 Pin=C1-15
+Added Net: Name=IO0
+Added Pin To Net: NetName=IO1 Pin=C1-14
+Added Net: Name=IO1
+Added Pin To Net: NetName=IO2 Pin=C1-13
+Added Net: Name=IO2
+Added Pin To Net: NetName=IO3 Pin=C1-12
+Added Net: Name=IO3
+Added Pin To Net: NetName=IO4 Pin=C1-11
+Added Net: Name=IO4
+Added Pin To Net: NetName=IO5 Pin=C1-10
+Added Net: Name=IO5
+Added Pin To Net: NetName=IO6 Pin=C1-9
+Added Net: Name=IO6
+Added Pin To Net: NetName=IO7 Pin=C1-4
+Added Net: Name=IO7
+Added Pin To Net: NetName=IRQ Pin=C1-22
+Added Net: Name=IRQ
+Added Pin To Net: NetName=MISO Pin=C1-19
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=C1-18
+Added Net: Name=MOSI
+Added Pin To Net: NetName=REST' Pin=C1-3
+Added Net: Name=REST'
+Added Pin To Net: NetName=WAKEUP Pin=C1-2
+Added Net: Name=WAKEUP
+Added Member To Class: ClassName=BU01 Member=Component P1 Header 6
+Added Member To Class: ClassName=BU01 Member=Component P2 Header 8
+Added Room: Name=BU01

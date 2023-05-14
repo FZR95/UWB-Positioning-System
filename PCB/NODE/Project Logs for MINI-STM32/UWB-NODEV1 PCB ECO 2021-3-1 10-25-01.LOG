@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=VCC3V3 Pin=J3-1
+Removed Pin From Net: NetName=KEY0 Pin=K0-2
+Removed Pin From Net: NetName=KEY1 Pin=K1-2
+Change Component Designator: OldDesignator=K0 NewDesignator=KEY0
+Change Component Designator: OldDesignator=K1 NewDesignator=KEY1
+Added Pin To Net: NetName=VCC3.3 Pin=J3-1
+Added Pin To Net: NetName=K0 Pin=KEY0-2
+Added Net: Name=K0
+Added Pin To Net: NetName=K1 Pin=KEY1-2
+Added Net: Name=K1

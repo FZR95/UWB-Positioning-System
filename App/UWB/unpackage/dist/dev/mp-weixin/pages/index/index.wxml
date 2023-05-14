@@ -1,0 +1,1 @@
+<view class="content"><view class="header"><view data-event-opts="{{[['tap',[['IOT_check_status']]]]}}" class="header_text" bindtap="__e">Anchor1</view><view class="header_status">{{''+status+''}}</view></view></view>

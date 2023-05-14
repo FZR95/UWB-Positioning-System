@@ -1,0 +1,25 @@
+Added Component: Designator=C1(BU01)
+Added Pin To Net: NetName=NetC1_3 Pin=C1-3
+Added Pin To Net: NetName=NetC1_4 Pin=C1-4
+Added Pin To Net: NetName=3V3 Pin=C1-5
+Added Pin To Net: NetName=3V3 Pin=C1-6
+Added Pin To Net: NetName=3V3 Pin=C1-7
+Added Pin To Net: NetName=GND Pin=C1-8
+Added Pin To Net: NetName=NetC1_9 Pin=C1-9
+Added Pin To Net: NetName=NetC1_10 Pin=C1-10
+Added Pin To Net: NetName=NetC1_11 Pin=C1-11
+Added Pin To Net: NetName=NetC1_12 Pin=C1-12
+Added Pin To Net: NetName=NetC1_13 Pin=C1-13
+Added Pin To Net: NetName=NetC1_14 Pin=C1-14
+Added Pin To Net: NetName=NetC1_15 Pin=C1-15
+Added Pin To Net: NetName=GND Pin=C1-16
+Added Pin To Net: NetName=NetC1_17 Pin=C1-17
+Added Pin To Net: NetName=NetC1_18 Pin=C1-18
+Added Pin To Net: NetName=NetC1_19 Pin=C1-19
+Added Pin To Net: NetName=NetC1_20 Pin=C1-20
+Added Pin To Net: NetName=GND Pin=C1-21
+Added Pin To Net: NetName=NetC1_22 Pin=C1-22
+Added Pin To Net: NetName=GND Pin=C1-23
+Added Pin To Net: NetName=GND Pin=C1-24
+Added Member To Class: ClassName=BU01 Member=Component C1 BU01
+Added Room: Name=BU01

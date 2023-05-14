@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=KEY0 NewDesignator=K0
+Change Component Designator: OldDesignator=KEY1 NewDesignator=K1
+Added Pin To Net: NetName=KEY0 Pin=K0-2
+Added Pin To Net: NetName=KEY1 Pin=K1-2

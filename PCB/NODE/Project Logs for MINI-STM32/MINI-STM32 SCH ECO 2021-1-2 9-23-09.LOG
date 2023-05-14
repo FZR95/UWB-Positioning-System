@@ -1,0 +1,5 @@
+Add Pin To Net: Pin=J6-12 Old Net=NetJ6_12 New Net=GND
+Change Pin Designator/Name:  Old Designator=U2-27 Old Name=PB1/ADC9 New Designator =PB0/ADC8 New Name=26
+Change Pin Designator/Name:  Old Designator=U2-29 Old Name=PB10/USART3_TX New Designator =PA2/USART2_TX/ADC2 New Name=16
+Change Pin Designator/Name:  Old Designator=U2-30 Old Name=PB11/USART3_RX New Designator =PB10/USART3_TX New Name=29
+Change Pin Designator/Name:  Old Designator=U2-16 Old Name=PA2/USART2_TX/ADC2 New Designator =PA3/USART2_RX/ADC3 New Name=17

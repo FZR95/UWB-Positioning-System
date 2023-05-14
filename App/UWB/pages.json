@@ -1,0 +1,64 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/sector/sector",
+			"style": {
+				"navigationBarTitleText": "区域概览",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "UWB定位系统"
+			}
+		}, 
+		{
+			"path": "pages/log/log",
+			"style": {
+				"navigationBarTitleText": "日志查询",
+				"enablePullDownRefresh": false
+			}
+
+		}, 
+		{
+			"path": "pages/humanmanagement/humanmanagement",
+			"style": {
+				"navigationBarTitleText": "人员管理",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "UWB定位系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/sector/sector",
+				"iconPath": "static/sector_grey.png",
+				"selectedIconPath": "static/sector_g.png",
+				"text": "区域概览"
+			},
+			{
+				"pagePath": "pages/humanmanagement/humanmanagement",
+				"iconPath": "static/pman_grey.png",
+				"selectedIconPath": "static/pman_g.png",
+				"text": "人员管理"
+			},
+			{
+				"pagePath": "pages/log/log",
+				"iconPath": "static/log_grey.png",
+				"selectedIconPath": "static/log_g.png",
+				"text": "日志查询"
+			}
+		]
+	}
+}

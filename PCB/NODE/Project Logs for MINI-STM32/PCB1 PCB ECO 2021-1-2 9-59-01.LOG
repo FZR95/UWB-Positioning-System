@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=IO7 Pin=U2-8
+Removed Pin From Net: NetName=IO1 Pin=U2-50
+Removed Pin From Net: NetName=IO2 Pin=U2-55
+Removed Pin From Net: NetName=IO0 Pin=U2-56
+Added Pin To Net: NetName=PA15 Pin=U2-50
+Added Net: Name=PA15
+Added Pin To Net: NetName=PB3 Pin=U2-55
+Added Net: Name=PB3
+Added Pin To Net: NetName=PB4 Pin=U2-56
+Added Net: Name=PB4
+Added Pin To Net: NetName=PC0 Pin=U2-8
+Added Net: Name=PC0
+Added Member To Class: ClassName=MINI-STM32 Member=Component C2 104
+Added Member To Class: ClassName=MINI-STM32 Member=Component C9 104
+Added Member To Class: ClassName=MINI-STM32 Member=Component U2 STM32F103RCT6

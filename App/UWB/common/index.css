@@ -1,0 +1,105 @@
+.content {
+	padding: 0 20rpx;
+}
+
+.header {
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: #C8C7CC 3rpx solid;
+}
+
+.emergent {
+	background: #EB3349;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: ;
+}
+
+.reversed {
+	transform: rotate(180deg);
+}
+
+.header image {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.title {
+	background: #AAFFA9;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #11FFBD, #AAFFA9);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin-top: 20rpx;
+	padding: 20rpx;
+	font-weight: 700;
+}
+
+.header_text {
+	line-height: 100rpx;
+	font-weight: 400;
+}
+
+.header_status {
+	display: flex;
+	justify-self: flex-end;
+	align-items: center;
+}
+
+.sector {
+	margin-bottom: 20rpx;
+}
+
+.sector_title {
+	padding-left: 10rpx;
+	font-weight: 600;
+	line-height: 80rpx;
+	border-bottom: #3498db 8rpx solid;
+	color: black;
+	margin-bottom: 20rpx;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	background-color: #F8F8F8;
+	border-radius: 10rpx;
+	margin-bottom: 20rpx;
+	padding: 10rpx 20rpx;
+	font-weight: 300;
+}
+
+.info_header {
+	line-height: 40rpx;
+	font-weight: 500;
+	border-bottom: #FFFFFF 4rpx solid;
+	margin-bottom: 20rpx;
+	padding: 10rpx 0;
+}
+
+.optheader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.optheader .opt {
+	font-weight: normal;
+	font-size: small;
+}
+
+.optheader switch {
+	transform: scale(0.5);
+}
+
+.uwbmap {
+	margin_bottom: 20rpx;
+	margin-left: auto;
+	margin-right: auto;
+}

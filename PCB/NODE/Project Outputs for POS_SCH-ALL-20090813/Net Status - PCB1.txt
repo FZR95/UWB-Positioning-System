@@ -1,0 +1,72 @@
+Net Status Report
+Filename     : C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc
+Date         : 2021/1/2
+Time         : 14:26:05
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    BOOT0, Signal Layers Only, 1131.761mils
+    BOOT1, Signal Layers Only, 1012.764mils
+    CS, Signal Layers Only, 1696.144mils
+    DC, Signal Layers Only, 702.185mils
+    EXT, Signal Layers Only, 855.431mils
+    GND, Signal Layers Only, 0mils
+    IO0, Signal Layers Only, 506.083mils
+    IO1, Signal Layers Only, 426.287mils
+    IO2, Signal Layers Only, 414.629mils
+    IO3, Signal Layers Only, 426.025mils
+    IO4, Signal Layers Only, 406.196mils
+    IO5, Signal Layers Only, 453.844mils
+    IO6, Signal Layers Only, 380.742mils
+    IO7, Signal Layers Only, 438.471mils
+    IRQ, Signal Layers Only, 1386.637mils
+    KEY0, Signal Layers Only, 1708.234mils
+    KEY1, Signal Layers Only, 1894.667mils
+    LED0, Signal Layers Only, 301.447mils
+    LED1, Signal Layers Only, 452.698mils
+    NetCON1_1, Signal Layers Only, 225.202mils
+    NetCON1_2, Signal Layers Only, 213.544mils
+    NetCON1_3, Signal Layers Only, 612.533mils
+    NetD0_1, Signal Layers Only, 93.071mils
+    NetD1_1, Signal Layers Only, 133.212mils
+    NetD2_1, Signal Layers Only, 91.32mils
+    NetP1_15, Signal Layers Only, 146.208mils
+    NetP1_16, Signal Layers Only, 237.045mils
+    OSC_IN1, Signal Layers Only, 864.36mils
+    OSC_IN2, Signal Layers Only, 787.192mils
+    OSC_OUT1, Signal Layers Only, 998.915mils
+    OSC_OUT2, Signal Layers Only, 921.628mils
+    PA0, Signal Layers Only, 1853.305mils
+    PA1, Signal Layers Only, 860.988mils
+    PA11, Signal Layers Only, 1388.458mils
+    PA12, Signal Layers Only, 1347.901mils
+    PA13, Signal Layers Only, 391.963mils
+    PA14, Signal Layers Only, 395.789mils
+    PA15, Signal Layers Only, 930.74mils
+    PA2, Signal Layers Only, 812.522mils
+    PA3, Signal Layers Only, 833.829mils
+    PB3, Signal Layers Only, 875.73mils
+    PB4, Signal Layers Only, 988.463mils
+    PB5, Signal Layers Only, 886.682mils
+    PB6, Signal Layers Only, 997.943mils
+    PB7, Signal Layers Only, 894.745mils
+    PC10, Signal Layers Only, 1042.77mils
+    PC11, Signal Layers Only, 1042.125mils
+    PC12, Signal Layers Only, 900.577mils
+    PD2, Signal Layers Only, 993.1mils
+    RESET, Signal Layers Only, 2343.379mils
+    RSET, Signal Layers Only, 652.61mils
+    RST', Signal Layers Only, 696.833mils
+    RXD, Signal Layers Only, 545.856mils
+    SCK, Signal Layers Only, 1181.257mils
+    SDA, Signal Layers Only, 1123.266mils
+    SPI1_CS, Signal Layers Only, 958.57mils
+    SPI1_MISO, Signal Layers Only, 692.084mils
+    SPI1_MOSI, Signal Layers Only, 525.438mils
+    SPI1_SCK, Signal Layers Only, 819.735mils
+    TXD, Signal Layers Only, 565.999mils
+    VCC3.3, Signal Layers Only, 12440.923mils
+    VCC3V3, Signal Layers Only, 0mils
+    VCC5, Signal Layers Only, 1546.062mils
+    WAKE, Signal Layers Only, 771.738mils
+count : 64

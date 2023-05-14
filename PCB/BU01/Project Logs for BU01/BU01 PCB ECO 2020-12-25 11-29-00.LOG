@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=CS' Pin=R1-1
+Removed Member From Class: ClassName=BU01 Member=R4
+Change Component Designator: OldDesignator=R2 NewDesignator=R1
+Change Component Designator: OldDesignator=R3 NewDesignator=R2
+Change Component Designator: OldDesignator=R4 NewDesignator=R3
+Added Pin To Net: NetName=CS' Pin=P1-2
+Added Room: Name=BU01

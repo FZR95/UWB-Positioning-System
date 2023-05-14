@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=PA9 Pin=J7-10
+Removed Pin From Net: NetName=PA10 Pin=J7-11
+Added Room: Name=MINI-STM32

@@ -1,0 +1,596 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Net Status Report</title>
+</head>
+<body onload="document.getElementById('radio_mil').click()"><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD20\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Net Status Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2021/1/2</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">14:26:05</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc" class="file"><acronym title="C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc">C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc</acronym></a></td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Units:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">
+<form><input type="radio" name="radio_units" id="radio_mm" onclick="changeUnits(this, 'mm')">mm<input type="radio" name="radio_units" id="radio_mil" onclick="changeUnits(this, 'mil')">mils</form>
+</td>
+</tr>
+</table><a name="ID4SYDEFLV0DHYDVCZ1GQMXNNVDJTHSOLM1UHKI2ILQVEQTG2RJPN"><table>
+<tr>
+<th class="column1">Nets</th>
+<th class="column2">Layer</th>
+<th class="column3">Length</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2449.032mil|Location2.X=3701mil|Location1.Y=2986.193mil|Location2.Y=3440mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2449.032mil|Location2.X=3701mil|Location1.Y=2986.193mil|Location2.Y=3440mil|Absolute=True">BOOT0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="11317609">1131.761mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.607mil|Location2.X=3701mil|Location1.Y=3392.64mil|Location2.Y=3533.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.607mil|Location2.X=3701mil|Location1.Y=3392.64mil|Location2.Y=3533.176mil|Absolute=True">BOOT1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10127637">1012.764mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.473mil|Location2.X=2574.485mil|Location1.Y=2326.472mil|Location2.Y=3518.093mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2231.473mil|Location2.X=2574.485mil|Location1.Y=2326.472mil|Location2.Y=3518.093mil|Absolute=True">CS</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="16961444">1696.144mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2331.473mil|Location2.X=2532.726mil|Location1.Y=2326.472mil|Location2.Y=3042.049mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2331.473mil|Location2.X=2532.726mil|Location1.Y=2326.472mil|Location2.Y=3042.049mil|Absolute=True">DC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7021848">702.185mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2544.597mil|Location1.Y=3392.64mil|Location2.Y=4190mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2544.597mil|Location1.Y=3392.64mil|Location2.Y=4190mil|Absolute=True">EXT</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8554307">855.431mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1535.528mil|Location2.X=3783.528mil|Location1.Y=1752.535mil|Location2.Y=3790mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1535.528mil|Location2.X=3783.528mil|Location1.Y=1752.535mil|Location2.Y=3790mil|Absolute=True">GND</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.354mil|Location2.X=3008.528mil|Location1.Y=3041.871mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2393.354mil|Location2.X=3008.528mil|Location1.Y=3041.871mil|Location2.Y=3788.528mil|Absolute=True">IO0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5060831">506.083mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2309.837mil|Location2.X=2908.528mil|Location1.Y=3125.387mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2309.837mil|Location2.X=2908.528mil|Location1.Y=3125.387mil|Location2.Y=3788.528mil|Absolute=True">IO1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4262871">426.287mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2379.435mil|Location2.X=2825.769mil|Location1.Y=3055.79mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2379.435mil|Location2.X=2825.769mil|Location1.Y=3055.79mil|Location2.Y=3788.528mil|Absolute=True">IO2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4146286">414.629mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2641.472mil|Location2.X=2744.302mil|Location1.Y=3378.721mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2641.472mil|Location2.X=2744.302mil|Location1.Y=3378.721mil|Location2.Y=3788.528mil|Absolute=True">IO3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4260254">426.025mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2541.472mil|Location2.X=2848.608mil|Location1.Y=3174.194mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2541.472mil|Location2.X=2848.608mil|Location1.Y=3174.194mil|Location2.Y=3788.528mil|Absolute=True">IO4</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4061958">406.196mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.472mil|Location2.X=2702.543mil|Location1.Y=3420.479mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2441.472mil|Location2.X=2702.543mil|Location1.Y=3420.479mil|Location2.Y=3788.528mil|Absolute=True">IO5</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4538438">453.844mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.472mil|Location2.X=2530.678mil|Location1.Y=3378.721mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.472mil|Location2.X=2530.678mil|Location1.Y=3378.721mil|Location2.Y=3788.528mil|Absolute=True">IO6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3807418">380.742mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.472mil|Location2.X=2502.839mil|Location1.Y=3350.882mil|Location2.Y=3788.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2241.472mil|Location2.X=2502.839mil|Location1.Y=3350.882mil|Location2.Y=3788.528mil|Absolute=True">IO7</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4384708">438.471mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.124mil|Location2.X=3205mil|Location1.Y=3069.71mil|Location2.Y=4190mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.124mil|Location2.X=3205mil|Location1.Y=3069.71mil|Location2.Y=4190mil|Absolute=True">IRQ</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="13866366">1386.637mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2716.285mil|Location2.X=3520mil|Location1.Y=2033.126mil|Location2.Y=3111.646mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2716.285mil|Location2.X=3520mil|Location1.Y=2033.126mil|Location2.Y=3111.646mil|Absolute=True">KEY0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="17082336">1708.234mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2702.365mil|Location2.X=3505mil|Location1.Y=2033.126mil|Location2.Y=3097.726mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2702.365mil|Location2.X=3505mil|Location1.Y=2033.126mil|Location2.Y=3097.726mil|Absolute=True">KEY1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="18946671">1894.667mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2618.849mil|Location2.X=3012mil|Location1.Y=2165mil|Location2.Y=3014.21mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2618.849mil|Location2.X=3012mil|Location1.Y=2165mil|Location2.Y=3014.21mil|Absolute=True">LED0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3014473">301.447mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2730.204mil|Location2.X=3165mil|Location1.Y=2858.806mil|Location2.Y=3139.485mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2730.204mil|Location2.X=3165mil|Location1.Y=2858.806mil|Location2.Y=3139.485mil|Absolute=True">LED1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4526979">452.698mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2174.929mil|Location2.X=2323.26mil|Location1.Y=1878.945mil|Location2.Y=2150mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2174.929mil|Location2.X=2323.26mil|Location1.Y=1878.945mil|Location2.Y=2150mil|Absolute=True">NetCON1_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2252022">225.202mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282.436mil|Location2.X=2348.85mil|Location1.Y=1878.945mil|Location2.Y=2165.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2282.436mil|Location2.X=2348.85mil|Location1.Y=1878.945mil|Location2.Y=2165.653mil|Absolute=True">NetCON1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2135437">213.544mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.315mil|Location2.X=2410.168mil|Location1.Y=1855mil|Location2.Y=2165.653mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2056.315mil|Location2.X=2410.168mil|Location1.Y=1855mil|Location2.Y=2165.653mil|Absolute=True">NetCON1_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6125329">612.533mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2733.092mil|Location2.X=3012mil|Location1.Y=2081mil|Location2.Y=2670mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2733.092mil|Location2.X=3012mil|Location1.Y=2081mil|Location2.Y=2670mil|Absolute=True">NetD0_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="930709">93.071mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3111.315mil|Location2.X=3249mil|Location1.Y=2858.806mil|Location2.Y=3013.724mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3111.315mil|Location2.X=3249mil|Location1.Y=2858.806mil|Location2.Y=3013.724mil|Absolute=True">NetD1_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1332122">133.212mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1619.528mil|Location2.X=1680mil|Location1.Y=2336.315mil|Location2.Y=2482mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1619.528mil|Location2.X=1680mil|Location1.Y=2336.315mil|Location2.Y=2482mil|Absolute=True">NetD2_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="913199">91.32mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3511.276mil|Location2.X=3845mil|Location1.Y=3346.315mil|Location2.Y=3483.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3511.276mil|Location2.X=3845mil|Location1.Y=3346.315mil|Location2.Y=3483.528mil|Absolute=True">NetP1_15</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1462080">146.208mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3511.276mil|Location2.X=3945mil|Location1.Y=3416.472mil|Location2.Y=3486.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3511.276mil|Location2.X=3945mil|Location1.Y=3416.472mil|Location2.Y=3486.861mil|Absolute=True">NetP1_16</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2370452">237.045mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.768mil|Location2.X=3698.528mil|Location1.Y=2256.473mil|Location2.Y=3028.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.768mil|Location2.X=3698.528mil|Location1.Y=2256.473mil|Location2.Y=3028.129mil|Absolute=True">OSC_IN1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8643600">864.36mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.607mil|Location2.X=3195.653mil|Location1.Y=2557.881mil|Location2.Y=3055.968mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.607mil|Location2.X=3195.653mil|Location1.Y=2557.881mil|Location2.Y=3055.968mil|Absolute=True">OSC_IN2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7871915">787.192mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2646.688mil|Location2.X=3698.528mil|Location1.Y=2156.473mil|Location2.Y=3042.049mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2646.688mil|Location2.X=3698.528mil|Location1.Y=2156.473mil|Location2.Y=3042.049mil|Absolute=True">OSC_OUT1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9989153">998.915mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2674.526mil|Location2.X=3472mil|Location1.Y=2557.881mil|Location2.Y=3069.888mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2674.526mil|Location2.X=3472mil|Location1.Y=2557.881mil|Location2.Y=3069.888mil|Absolute=True">OSC_OUT2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9216281">921.628mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2785.882mil|Location2.X=3683.528mil|Location1.Y=2033.126mil|Location2.Y=3181.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2785.882mil|Location2.X=3683.528mil|Location1.Y=2033.126mil|Location2.Y=3181.243mil|Absolute=True">PA0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="18533048">1853.305mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.801mil|Location2.X=3845mil|Location1.Y=3016.472mil|Location2.Y=3195.162mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.801mil|Location2.X=3845mil|Location1.Y=3016.472mil|Location2.Y=3195.162mil|Absolute=True">PA1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8609883">860.988mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2195mil|Location2.X=2483.374mil|Location1.Y=2181.276mil|Location2.Y=3364.979mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2195mil|Location2.X=2483.374mil|Location1.Y=2181.276mil|Location2.Y=3364.979mil|Absolute=True">PA11</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="13884577">1388.458mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2224.472mil|Location2.X=2565mil|Location1.Y=2181.276mil|Location2.Y=3351.06mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2224.472mil|Location2.X=2565mil|Location1.Y=2181.276mil|Location2.Y=3351.06mil|Absolute=True">PA12</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="13479007">1347.901mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.403mil|Location2.X=2393.532mil|Location1.Y=3267.365mil|Location2.Y=3444.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.403mil|Location2.X=2393.532mil|Location1.Y=3267.365mil|Location2.Y=3444.286mil|Absolute=True">PA13</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3919625">391.963mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.403mil|Location2.X=2365.693mil|Location1.Y=3139.307mil|Location2.Y=3344.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1970.403mil|Location2.X=2365.693mil|Location1.Y=3139.307mil|Location2.Y=3344.286mil|Absolute=True">PA14</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3957893">395.789mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2379.613mil|Location1.Y=3125.387mil|Location2.Y=3473.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2379.613mil|Location1.Y=3125.387mil|Location2.Y=3473.528mil|Absolute=True">PA15</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9307396">930.74mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2813.721mil|Location2.X=3845mil|Location1.Y=3116.472mil|Location2.Y=3209.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2813.721mil|Location2.X=3845mil|Location1.Y=3116.472mil|Location2.Y=3209.082mil|Absolute=True">PA2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8125222">812.522mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2813.721mil|Location2.X=3845mil|Location1.Y=3216.472mil|Location2.Y=3309.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2813.721mil|Location2.X=3845mil|Location1.Y=3216.472mil|Location2.Y=3309.302mil|Absolute=True">PA3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8338290">833.829mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2449.21mil|Location1.Y=3055.79mil|Location2.Y=3273.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2449.21mil|Location1.Y=3055.79mil|Location2.Y=3273.528mil|Absolute=True">PB3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8757299">875.73mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2463.129mil|Location1.Y=3041.871mil|Location2.Y=3173.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2463.129mil|Location1.Y=3041.871mil|Location2.Y=3173.528mil|Absolute=True">PB4</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9884629">988.463mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2477.049mil|Location1.Y=3027.951mil|Location2.Y=3173.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2477.049mil|Location1.Y=3027.951mil|Location2.Y=3173.528mil|Absolute=True">PB5</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8866821">886.682mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2490.968mil|Location1.Y=3006.472mil|Location2.Y=3083.807mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2490.968mil|Location1.Y=3006.472mil|Location2.Y=3083.807mil|Absolute=True">PB6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9979428">997.943mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2504.888mil|Location1.Y=3000.112mil|Location2.Y=3073.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2504.888mil|Location1.Y=3000.112mil|Location2.Y=3073.528mil|Absolute=True">PB7</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8947447">894.745mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2393.532mil|Location1.Y=3111.468mil|Location2.Y=3473.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2393.532mil|Location1.Y=3111.468mil|Location2.Y=3473.528mil|Absolute=True">PC10</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10427701">1042.77mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2407.452mil|Location1.Y=3097.548mil|Location2.Y=3373.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2407.452mil|Location1.Y=3097.548mil|Location2.Y=3373.528mil|Absolute=True">PC11</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10421248">1042.125mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2421.371mil|Location1.Y=3083.629mil|Location2.Y=3373.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1596.473mil|Location2.X=2421.371mil|Location1.Y=3083.629mil|Location2.Y=3373.528mil|Absolute=True">PC12</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9005765">900.577mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2435.29mil|Location1.Y=3069.71mil|Location2.Y=3273.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2435.29mil|Location1.Y=3069.71mil|Location2.Y=3273.528mil|Absolute=True">PD2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9930997">993.1mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.446mil|Location2.X=3485mil|Location1.Y=1931.276mil|Location2.Y=3083.807mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2688.446mil|Location2.X=3485mil|Location1.Y=1931.276mil|Location2.Y=3083.807mil|Absolute=True">RESET</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="23433786">2343.379mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2431.473mil|Location2.X=2688.624mil|Location1.Y=2326.472mil|Location2.Y=3028.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2431.473mil|Location2.X=2688.624mil|Location1.Y=2326.472mil|Location2.Y=3028.129mil|Absolute=True">RSET</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6526097">652.61mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2488.919mil|Location1.Y=3336.963mil|Location2.Y=3990mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2488.919mil|Location1.Y=3336.963mil|Location2.Y=3990mil|Absolute=True">RST'</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6968327">696.833mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.403mil|Location2.X=2435.29mil|Location1.Y=3309.124mil|Location2.Y=3450.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.403mil|Location2.X=2435.29mil|Location1.Y=3309.124mil|Location2.Y=3450.528mil|Absolute=True">RXD</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5458561">545.856mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2490.79mil|Location2.X=2698.528mil|Location1.Y=2326.472mil|Location2.Y=3504.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2490.79mil|Location2.X=2698.528mil|Location1.Y=2326.472mil|Location2.Y=3504.174mil|Absolute=True">SCK</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="11812567">1181.257mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2462.951mil|Location2.X=2598.528mil|Location1.Y=2326.472mil|Location2.Y=3476.335mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2462.951mil|Location2.X=2598.528mil|Location1.Y=2326.472mil|Location2.Y=3476.335mil|Absolute=True">SDA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="11232664">1123.266mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2771.962mil|Location2.X=3183.11mil|Location1.Y=3281.285mil|Location2.Y=4090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2771.962mil|Location2.X=3183.11mil|Location1.Y=3281.285mil|Location2.Y=4090mil|Absolute=True">SPI1_CS</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="9585702">958.57mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.124mil|Location2.X=3140mil|Location1.Y=3309.124mil|Location2.Y=3890mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2744.124mil|Location2.X=3140mil|Location1.Y=3309.124mil|Location2.Y=3890mil|Absolute=True">SPI1_MISO</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6920838">692.084mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2730.204mil|Location2.X=3110mil|Location1.Y=3323.043mil|Location2.Y=3790mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2730.204mil|Location2.X=3110mil|Location1.Y=3323.043mil|Location2.Y=3790mil|Absolute=True">SPI1_MOSI</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5254376">525.438mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2758.043mil|Location2.X=3160mil|Location1.Y=3295.204mil|Location2.Y=3990mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2758.043mil|Location2.X=3160mil|Location1.Y=3295.204mil|Location2.Y=3990mil|Absolute=True">SPI1_SCK</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8197350">819.735mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.403mil|Location2.X=2449.21mil|Location1.Y=3323.043mil|Location2.Y=3544.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1870.403mil|Location2.X=2449.21mil|Location1.Y=3323.043mil|Location2.Y=3544.286mil|Absolute=True">TXD</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5659992">565.999mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.132mil|Location2.X=3805.252mil|Location1.Y=1710mil|Location2.Y=3890mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1560.132mil|Location2.X=3805.252mil|Location1.Y=1710mil|Location2.Y=3890mil|Absolute=True">VCC3.3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="124409226">12440.923mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=1938.93mil|Location1.Y=3162.206mil|Location2.Y=3573.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=1938.93mil|Location1.Y=3162.206mil|Location2.Y=3573.528mil|Absolute=True">VCC3V3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2238.929mil|Location1.Y=2147.142mil|Location2.Y=2973.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1496.473mil|Location2.X=2238.929mil|Location1.Y=2147.142mil|Location2.Y=2973.528mil|Absolute=True">VCC5</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="15460621">1546.062mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(%E6%96%B0%E7%89%88)MINI-STM32 %E7%A1%AC%E4%BB%B6%E5%9B%BE%E7%BA%B8\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2516.758mil|Location1.Y=3364.801mil|Location2.Y=4090mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\wanle\Downloads\MobileFile\(ÐÂ°æ)MINI-STM32 Ó²¼þÍ¼Ö½\PCB1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2140mil|Location2.X=2516.758mil|Location1.Y=3364.801mil|Location2.Y=4090mil|Absolute=True">WAKE</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7717383">771.738mils
+			</a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

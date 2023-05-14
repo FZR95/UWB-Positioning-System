@@ -1,0 +1,37 @@
+Removed Pin From Net: NetName=GND Pin=J7-1
+Removed Pin From Net: NetName=GND Pin=J7-2
+Removed Pin From Net: NetName=GND Pin=J7-3
+Removed Pin From Net: NetName=GND Pin=J7-4
+Removed Pin From Net: NetName=PA13 Pin=J7-12
+Removed Pin From Net: NetName=PA14 Pin=J7-13
+Removed Pin From Net: NetName=PC10 Pin=J7-15
+Removed Pin From Net: NetName=PC11 Pin=J7-16
+Removed Pin From Net: NetName=PC12 Pin=J7-17
+Removed Pin From Net: NetName=PD2 Pin=J7-18
+Removed Pin From Net: NetName=PB5 Pin=J7-21
+Removed Pin From Net: NetName=PB6 Pin=J7-22
+Removed Pin From Net: NetName=PB7 Pin=J7-23
+Removed Pin From Net: NetName=GND Pin=J7-26
+Removed Pin From Net: NetName=PA11 Pin=J7-27
+Removed Pin From Net: NetName=GND Pin=J7-28
+Removed Pin From Net: NetName=PA12 Pin=J7-29
+Removed Pin From Net: NetName=VCC5 Pin=J7-30
+Removed Member From Class: ClassName=MINI-STM32 Member=J7
+Added Component: Designator=P2(HDR2X9)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=PB7 Pin=P2-3
+Added Pin To Net: NetName=PB6 Pin=P2-4
+Added Pin To Net: NetName=PB5 Pin=P2-5
+Added Pin To Net: NetName=PB4 Pin=P2-6
+Added Pin To Net: NetName=PB3 Pin=P2-7
+Added Pin To Net: NetName=PD2 Pin=P2-8
+Added Pin To Net: NetName=PC12 Pin=P2-9
+Added Pin To Net: NetName=PC11 Pin=P2-10
+Added Pin To Net: NetName=PA15 Pin=P2-11
+Added Pin To Net: NetName=PC10 Pin=P2-12
+Added Pin To Net: NetName=VCC5 Pin=P2-14
+Added Pin To Net: NetName=VCC5 Pin=P2-16
+Added Pin To Net: NetName=VCC5 Pin=P2-18
+Added Member To Class: ClassName=MINI-STM32 Member=Component P2 Header 9X2

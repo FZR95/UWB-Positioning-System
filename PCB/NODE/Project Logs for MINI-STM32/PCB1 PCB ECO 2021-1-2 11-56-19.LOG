@@ -1,0 +1,47 @@
+Removed Pin From Net: NetName=OSC_OUT1 Pin=J6-2
+Removed Pin From Net: NetName=OSC_IN1 Pin=J6-4
+Removed Pin From Net: NetName=GND Pin=J6-12
+Removed Pin From Net: NetName=GND Pin=J6-13
+Removed Pin From Net: NetName=GND Pin=J6-14
+Removed Pin From Net: NetName=GND Pin=J6-15
+Removed Pin From Net: NetName=GND Pin=J6-16
+Removed Pin From Net: NetName=PA0 Pin=J6-17
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-18
+Removed Pin From Net: NetName=PA1 Pin=J6-19
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-20
+Removed Pin From Net: NetName=PA2 Pin=J6-21
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-22
+Removed Pin From Net: NetName=PA3 Pin=J6-23
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-24
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-25
+Removed Pin From Net: NetName=VCC3.3 Pin=J6-26
+Removed Pin From Net: NetName=GND Pin=J6-29
+Removed Pin From Net: NetName=GND Pin=J6-30
+Removed Member From Class: ClassName=MINI-STM32 Member=J6
+Added Component: Designator=P1(HDR2X9)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=PA0 Pin=P1-5
+Added Pin To Net: NetName=VCC3.3 Pin=P1-6
+Added Pin To Net: NetName=PA1 Pin=P1-7
+Added Pin To Net: NetName=VCC3.3 Pin=P1-8
+Added Pin To Net: NetName=PA2 Pin=P1-9
+Added Pin To Net: NetName=VCC3.3 Pin=P1-10
+Added Pin To Net: NetName=PA3 Pin=P1-11
+Added Pin To Net: NetName=VCC3.3 Pin=P1-12
+Added Pin To Net: NetName=VCC3.3 Pin=P1-13
+Added Pin To Net: NetName=VCC3.3 Pin=P1-14
+Added Pin To Net: NetName=GND Pin=P1-17
+Added Pin To Net: NetName=GND Pin=P1-18
+Added Pin To Net: NetName=NetP1_15 Pin=P1-15
+Added Pin To Net: NetName=NetP1_15 Pin=R1-1
+Added Net: Name=NetP1_15
+Added Pin To Net: NetName=NetP1_16 Pin=P1-16
+Added Pin To Net: NetName=NetP1_16 Pin=R2-2
+Added Net: Name=NetP1_16
+Added Member To Class: ClassName=MINI-STM32 Member=Component P1 Header 9X2

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=IO2 Pin=U2-29
+Added Pin To Net: NetName=IO2 Pin=U2-27
+Added Pin To Net: NetName=IO3 Pin=U2-29
+Added Pin To Net: NetName=RST' Pin=J091-3
+Added Net: Name=RST'
+Added Room: Name=MINI-STM32

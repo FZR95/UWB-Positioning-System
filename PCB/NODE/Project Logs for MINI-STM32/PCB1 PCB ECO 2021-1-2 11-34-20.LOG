@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=PB8 Pin=U2-61
+Removed Pin From Net: NetName=PB9 Pin=U2-62
+Added Pin To Net: NetName=DC Pin=U2-61
+Added Pin To Net: NetName=RESET Pin=U2-62

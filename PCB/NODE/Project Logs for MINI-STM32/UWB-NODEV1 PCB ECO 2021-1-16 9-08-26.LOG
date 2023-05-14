@@ -1,0 +1,10 @@
+Added Component: Designator=CON1(MicroUSB)
+Add component (AddParameter): Name = "Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Type B"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetCON1_1 Pin=CON1-1
+Added Pin To Net: NetName=NetCON1_2 Pin=CON1-2
+Added Pin To Net: NetName=NetCON1_3 Pin=CON1-3
+Added Pin To Net: NetName=GND Pin=CON1-5
+Added Member To Class: ClassName=MINI-STM32 Member=Component CON1 MicroUSB
+Added Room: Name=MINI-STM32

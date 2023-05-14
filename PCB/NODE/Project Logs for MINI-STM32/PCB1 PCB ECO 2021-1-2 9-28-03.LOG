@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=GND Pin=J6-12
+Removed Pin From Net: NetName=IO4 Pin=U2-16
+Removed Pin From Net: NetName=IO5 Pin=U2-29
+Added Pin To Net: NetName=IRQ Pin=U2-16
+Added Pin To Net: NetName=IO3 Pin=U2-27
+Added Pin To Net: NetName=IO4 Pin=U2-29
+Added Pin To Net: NetName=IO5 Pin=U2-30
+Change Net Name : Old Net Name=PA3 New Net Name=WAKE

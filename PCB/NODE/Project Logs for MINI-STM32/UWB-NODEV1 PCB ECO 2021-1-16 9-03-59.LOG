@@ -1,0 +1,65 @@
+Removed Pin From Net: NetName=VCC3.3 Pin=J3-1
+Removed Pin From Net: NetName=GND Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=GND Pin=P1-3
+Removed Pin From Net: NetName=GND Pin=P1-4
+Removed Pin From Net: NetName=PA0 Pin=P1-5
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-6
+Removed Pin From Net: NetName=PA1 Pin=P1-7
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-8
+Removed Pin From Net: NetName=PA2 Pin=P1-9
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-10
+Removed Pin From Net: NetName=PA3 Pin=P1-11
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-12
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-13
+Removed Pin From Net: NetName=VCC3.3 Pin=P1-14
+Removed Pin From Net: NetName=GND Pin=P1-17
+Removed Pin From Net: NetName=GND Pin=P1-18
+Removed Pin From Net: NetName=VCC3.3 Pin=P2-1
+Removed Pin From Net: NetName=VCC3.3 Pin=P2-2
+Removed Pin From Net: NetName=PA15 Pin=P2-3
+Removed Pin From Net: NetName=PC10 Pin=P2-4
+Removed Pin From Net: NetName=PC12 Pin=P2-5
+Removed Pin From Net: NetName=PC11 Pin=P2-6
+Removed Pin From Net: NetName=PB3 Pin=P2-7
+Removed Pin From Net: NetName=PD2 Pin=P2-8
+Removed Pin From Net: NetName=PB5 Pin=P2-9
+Removed Pin From Net: NetName=PB4 Pin=P2-10
+Removed Pin From Net: NetName=PB7 Pin=P2-11
+Removed Pin From Net: NetName=PB6 Pin=P2-12
+Removed Pin From Net: NetName=GND Pin=P2-13
+Removed Pin From Net: NetName=VCC5 Pin=P2-14
+Removed Pin From Net: NetName=GND Pin=P2-15
+Removed Pin From Net: NetName=VCC5 Pin=P2-16
+Removed Pin From Net: NetName=GND Pin=P2-17
+Removed Pin From Net: NetName=VCC5 Pin=P2-18
+Removed Pin From Net: NetName=BOOT0 Pin=R1-2
+Removed Pin From Net: NetName=BOOT1 Pin=R2-1
+Removed Pin From Net: NetName=NetCON1_3 Pin=R23-1
+Removed Pin From Net: NetName=RESET Pin=RST-1
+Removed Pin From Net: NetName=GND Pin=RST-2
+Removed Pin From Net: NetName=VCC3.3 Pin=WK_UP-1
+Removed Pin From Net: NetName=PA0 Pin=WK_UP-2
+Removed Member From Class: ClassName=MINI-STM32 Member=P1
+Removed Member From Class: ClassName=MINI-STM32 Member=R1
+Removed Member From Class: ClassName=MINI-STM32 Member=R2
+Removed Member From Class: ClassName=MINI-STM32 Member=RST
+Removed Member From Class: ClassName=MINI-STM32 Member=WK_UP
+Change Component Footprint: Designator=P2 Old Footprint=HDR2X9 New Footprint=HDR1X6
+Change Component Comment : Designator=P2 Old Comment=Header 9X2 New Comment=Header 6
+Change Component Designator: OldDesignator=K0 NewDesignator=KEY0
+Change Component Designator: OldDesignator=K1 NewDesignator=KEY1
+Added Component: Designator=S1(Switch)
+Added Pin To Net: NetName=VCC3V3 Pin=J3-1
+Added Pin To Net: NetName=VCC3V3 Pin=P2-1
+Added Pin To Net: NetName=VCC3V3 Pin=P2-2
+Added Pin To Net: NetName=VCC5 Pin=P2-3
+Added Pin To Net: NetName=VCC5 Pin=P2-4
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=NetCON1_3 Pin=S1-2
+Added Pin To Net: NetName=NetR23_1 Pin=R23-1
+Added Pin To Net: NetName=NetR23_1 Pin=S1-1
+Added Net: Name=NetR23_1
+Added Member To Class: ClassName=MINI-STM32 Member=Component S1 Switch
+Added Room: Name=MINI-STM32

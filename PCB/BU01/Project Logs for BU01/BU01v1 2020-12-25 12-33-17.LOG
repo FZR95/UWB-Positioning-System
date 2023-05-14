@@ -1,0 +1,108 @@
+Added Component: Designator=C1(BU01)
+Added Component: Designator=P1(HDR1X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P2(HDR1X8)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P3(HDR1X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R1(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.5 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Added Component: Designator=R2(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.5 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Added Component: Designator=R3(0805)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Axial Device, Thru-Hole; 2 Leads; 0.5 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=C1-5
+Added Pin To Net: NetName=3V3 Pin=C1-6
+Added Pin To Net: NetName=3V3 Pin=C1-7
+Added Pin To Net: NetName=3V3 Pin=P3-2
+Added Net: Name=3V3
+Added Pin To Net: NetName=CLK Pin=C1-20
+Added Pin To Net: NetName=CLK Pin=R1-1
+Added Net: Name=CLK
+Added Pin To Net: NetName=CS' Pin=C1-17
+Added Pin To Net: NetName=CS' Pin=P1-2
+Added Net: Name=CS'
+Added Pin To Net: NetName=EXTON Pin=C1-1
+Added Pin To Net: NetName=EXTON Pin=P3-5
+Added Net: Name=EXTON
+Added Pin To Net: NetName=GND Pin=C1-8
+Added Pin To Net: NetName=GND Pin=C1-16
+Added Pin To Net: NetName=GND Pin=C1-21
+Added Pin To Net: NetName=GND Pin=C1-23
+Added Pin To Net: NetName=GND Pin=C1-24
+Added Pin To Net: NetName=GND Pin=P3-1
+Added Net: Name=GND
+Added Pin To Net: NetName=IO0 Pin=C1-15
+Added Pin To Net: NetName=IO0 Pin=P2-1
+Added Net: Name=IO0
+Added Pin To Net: NetName=IO1 Pin=C1-14
+Added Pin To Net: NetName=IO1 Pin=P2-2
+Added Net: Name=IO1
+Added Pin To Net: NetName=IO2 Pin=C1-13
+Added Pin To Net: NetName=IO2 Pin=P2-3
+Added Net: Name=IO2
+Added Pin To Net: NetName=IO3 Pin=C1-12
+Added Pin To Net: NetName=IO3 Pin=P2-4
+Added Net: Name=IO3
+Added Pin To Net: NetName=IO4 Pin=C1-11
+Added Pin To Net: NetName=IO4 Pin=P2-5
+Added Net: Name=IO4
+Added Pin To Net: NetName=IO5 Pin=C1-10
+Added Pin To Net: NetName=IO5 Pin=P2-6
+Added Net: Name=IO5
+Added Pin To Net: NetName=IO6 Pin=C1-9
+Added Pin To Net: NetName=IO6 Pin=P2-7
+Added Net: Name=IO6
+Added Pin To Net: NetName=IO7 Pin=C1-4
+Added Pin To Net: NetName=IO7 Pin=P2-8
+Added Net: Name=IO7
+Added Pin To Net: NetName=IRQ Pin=C1-22
+Added Pin To Net: NetName=IRQ Pin=P1-1
+Added Net: Name=IRQ
+Added Pin To Net: NetName=MISO Pin=C1-19
+Added Pin To Net: NetName=MISO Pin=R2-1
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=C1-18
+Added Pin To Net: NetName=MOSI Pin=R3-1
+Added Net: Name=MOSI
+Added Pin To Net: NetName=NetP1_3 Pin=P1-3
+Added Pin To Net: NetName=NetP1_3 Pin=R1-2
+Added Net: Name=NetP1_3
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP1_4 Pin=R2-2
+Added Net: Name=NetP1_4
+Added Pin To Net: NetName=NetP1_5 Pin=P1-5
+Added Pin To Net: NetName=NetP1_5 Pin=R3-2
+Added Net: Name=NetP1_5
+Added Pin To Net: NetName=RST' Pin=C1-3
+Added Pin To Net: NetName=RST' Pin=P3-3
+Added Net: Name=RST'
+Added Pin To Net: NetName=WAKEUP Pin=C1-2
+Added Pin To Net: NetName=WAKEUP Pin=P3-4
+Added Net: Name=WAKEUP
+Added Class: Name=BU01
+Added Room: Name=BU01

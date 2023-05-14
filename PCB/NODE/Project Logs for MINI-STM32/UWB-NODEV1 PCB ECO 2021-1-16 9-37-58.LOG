@@ -1,0 +1,5 @@
+Change Component DesignItemId : Designator=P? Old DesignItemId=Header 7H New DesignItemId=Header 7
+Change Component Footprint: Designator=P? Old Footprint=HDR1X7H New Footprint=HDR1X7
+Change Component Comment : Designator=P? Old Comment=Header 7H New Comment=Header 7
+Change Component Designator: OldDesignator=P? NewDesignator=P2
+Change Component Description : Designator=P2 Old Description=Header, 7-Pin, Right Angle New Description=Header, 7-Pin

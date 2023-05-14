@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=DC Pin=J7-6
+Removed Pin From Net: NetName=PC8 Pin=J7-7
+Removed Pin From Net: NetName=LED0 Pin=J7-9
+Removed Pin From Net: NetName=GND Pin=J7-14
+Removed Pin From Net: NetName=GND Pin=J7-19
+Removed Pin From Net: NetName=GND Pin=J7-20
+Removed Pin From Net: NetName=RSET Pin=U2-15
+Removed Pin From Net: NetName=IRQ Pin=U2-16
+Removed Pin From Net: NetName=DC Pin=U2-38
+Removed Pin From Net: NetName=LED0 Pin=U2-41
+Removed Pin From Net: NetName=PA9 Pin=U2-42
+Removed Pin From Net: NetName=PA10 Pin=U2-43
+Added Pin To Net: NetName=PC9 Pin=J7-7
+Added Pin To Net: NetName=PA1 Pin=U2-15
+Added Net: Name=PA1
+Added Pin To Net: NetName=PA2 Pin=U2-16
+Added Net: Name=PA2
+Added Pin To Net: NetName=PA8 Pin=J7-9
+Added Pin To Net: NetName=PA8 Pin=U2-41
+Added Net: Name=PA8
+Added Pin To Net: NetName=PC7 Pin=J7-5
+Added Pin To Net: NetName=PC7 Pin=J7-6
+Added Pin To Net: NetName=PC7 Pin=U2-38
+Added Net: Name=PC7

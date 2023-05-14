@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=GND Pin=J5-1
+Removed Pin From Net: NetName=VCC3.3 Pin=J5-2
+Removed Pin From Net: NetName=PB13 Pin=J5-3
+Removed Pin From Net: NetName=PB15 Pin=J5-4
+Removed Pin From Net: NetName=RSET Pin=J5-5
+Removed Pin From Net: NetName=DC Pin=J5-6
+Removed Pin From Net: NetName=CS Pin=J5-7
+Removed Member From Class: ClassName=MINI-STM32 Member=J5
+Added Component: Designator=J1(HDR1X7)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=VCC3.3 Pin=J1-2
+Added Pin To Net: NetName=PB13 Pin=J1-3
+Added Pin To Net: NetName=PB15 Pin=J1-4
+Added Pin To Net: NetName=RSET Pin=J1-5
+Added Pin To Net: NetName=DC Pin=J1-6
+Added Pin To Net: NetName=CS Pin=J1-7
+Added Member To Class: ClassName=MINI-STM32 Member=Component J1 Header 7
+Added Room: Name=MINI-STM32

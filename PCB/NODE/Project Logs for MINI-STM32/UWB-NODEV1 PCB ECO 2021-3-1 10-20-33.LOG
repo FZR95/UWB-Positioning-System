@@ -1,0 +1,59 @@
+Removed Pin From Net: NetName=PA14 Pin=J2-2
+Removed Pin From Net: NetName=PA13 Pin=J2-3
+Removed Pin From Net: NetName=VCC3.3 Pin=J3-1
+Removed Pin From Net: NetName=GND Pin=J3-2
+Removed Pin From Net: NetName=TXD Pin=J3-4
+Removed Pin From Net: NetName=VCC3.3 Pin=P2-1
+Removed Pin From Net: NetName=VCC3.3 Pin=P2-2
+Removed Pin From Net: NetName=VCC5 Pin=P2-3
+Removed Pin From Net: NetName=VCC5 Pin=P2-4
+Removed Pin From Net: NetName=GND Pin=P2-5
+Removed Pin From Net: NetName=GND Pin=P2-6
+Removed Pin From Net: NetName=RESET Pin=RST-1
+Removed Pin From Net: NetName=GND Pin=RST-2
+Removed Pin From Net: NetName=NetCON1_3 Pin=S1-2
+Removed Member From Class: ClassName=MINI-STM32 Member=RST
+Removed Member From Class: ClassName=MINI-STM32 Member=S1
+Change Component Designator: OldDesignator=K0 NewDesignator=KEY0
+Change Component Designator: OldDesignator=K1 NewDesignator=KEY1
+Added Component: Designator=P1(HDR2X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R1(0603J)
+Added Component: Designator=R2(0603J)
+Added Component: Designator=REST(SW-SPST)
+Added Pin To Net: NetName=PA13 Pin=J2-2
+Added Pin To Net: NetName=PA14 Pin=J2-3
+Added Pin To Net: NetName=TXD Pin=J3-2
+Added Pin To Net: NetName=GND Pin=J3-4
+Added Pin To Net: NetName=VCC3.3 Pin=P1-1
+Added Pin To Net: NetName=VCC3.3 Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=P1-6
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Pin To Net: NetName=VCC5 Pin=P2-5
+Added Pin To Net: NetName=VCC5 Pin=P2-6
+Added Pin To Net: NetName=BOOT0 Pin=R1-2
+Added Pin To Net: NetName=BOOT1 Pin=R2-1
+Added Pin To Net: NetName=NetCON1_3 Pin=R23-1
+Added Pin To Net: NetName=RESET Pin=REST-1
+Added Pin To Net: NetName=GND Pin=REST-2
+Added Pin To Net: NetName=NetP1_3 Pin=P1-3
+Added Pin To Net: NetName=NetP1_3 Pin=R1-1
+Added Net: Name=NetP1_3
+Added Pin To Net: NetName=NetP1_4 Pin=P1-4
+Added Pin To Net: NetName=NetP1_4 Pin=R2-2
+Added Net: Name=NetP1_4
+Added Pin To Net: NetName=VCC3V3 Pin=J3-1
+Added Pin To Net: NetName=VCC3V3 Pin=P2-1
+Added Pin To Net: NetName=VCC3V3 Pin=P2-2
+Added Net: Name=VCC3V3
+Added Member To Class: ClassName=MINI-STM32 Member=Component J2 Header 4
+Added Member To Class: ClassName=MINI-STM32 Member=Component J3 Header 4
+Added Member To Class: ClassName=MINI-STM32 Member=Component P1 Header 3X2
+Added Member To Class: ClassName=MINI-STM32 Member=Component R1 510R
+Added Member To Class: ClassName=MINI-STM32 Member=Component R2 510R
+Added Member To Class: ClassName=MINI-STM32 Member=Component REST
+Added Room: Name=MINI-STM32

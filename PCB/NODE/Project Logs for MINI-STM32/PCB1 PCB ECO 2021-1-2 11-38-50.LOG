@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=RSET Pin=U2-2
+Removed Pin From Net: NetName=KEY0 Pin=U2-8
+Removed Pin From Net: NetName=KEY1 Pin=U2-9
+Removed Pin From Net: NetName=LED0 Pin=U2-10
+Added Pin To Net: NetName=LED0 Pin=U2-2
+Added Pin To Net: NetName=KEY1 Pin=U2-8
+Added Pin To Net: NetName=KEY0 Pin=U2-9
+Added Pin To Net: NetName=LED1 Pin=U2-10

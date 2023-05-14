@@ -1,0 +1,17 @@
+{
+  "name": "cloudfunctions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alicloud/pop-core": "^1.7.10",
+    "iot_client": "file:common/iot_client",
+    "iot_querydevice": "file:common/iot_querydevice"
+  }
+}

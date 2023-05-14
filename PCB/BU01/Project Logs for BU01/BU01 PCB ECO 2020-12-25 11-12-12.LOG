@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=RST' Pin=P3-3
+Added Pin To Net: NetName=WAKEUP Pin=P3-4
+Added Pin To Net: NetName=EXTON Pin=P3-5
+Added Room: Name=BU01

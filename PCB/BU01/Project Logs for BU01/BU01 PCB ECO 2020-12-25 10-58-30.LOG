@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=NetC1_3 Pin=C1-3
+Removed Pin From Net: NetName=NetC1_17 Pin=C1-17
+Removed Pin From Net: NetName=NetC1_20 Pin=C1-20
+Removed Pin From Net: NetName=NetC1_22 Pin=C1-22
+Removed Pin From Net: NetName=3V3 Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=NetC1_3 Pin=P1-3
+Removed Pin From Net: NetName=NetC1_22 Pin=P1-4
+Removed Pin From Net: NetName=NetC1_20 Pin=P1-5
+Removed Pin From Net: NetName=NetC1_19 Pin=P1-6
+Removed Pin From Net: NetName=NetC1_18 Pin=P1-7
+Removed Pin From Net: NetName=NetC1_17 Pin=P1-8
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X8 New Footprint=HDR1X5
+Change Component Comment : Designator=P1 Old Comment=Header 8 New Comment=Header 5
+Added Component: Designator=P3(HDR1X5)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_22 Pin=C1-1
+Added Pin To Net: NetName=NetC1_3 Pin=C1-2
+Added Pin To Net: NetName=NetC1_17 Pin=C1-3
+Added Pin To Net: NetName=NetC1_20 Pin=C1-22
+Added Pin To Net: NetName=NetC1_20 Pin=P1-1
+Added Pin To Net: NetName=NetC1_19 Pin=P1-4
+Added Pin To Net: NetName=NetC1_18 Pin=P1-5
+Added Pin To Net: NetName=GND Pin=P3-1
+Added Pin To Net: NetName=3V3 Pin=P3-2
+Change Net Name : Old Net Name=NetC1_3 New Net Name=WAKEUP
+Change Net Name : Old Net Name=NetC1_17 New Net Name=RST'
+Change Net Name : Old Net Name=NetC1_18 New Net Name=MOSI
+Change Net Name : Old Net Name=NetC1_19 New Net Name=MISO
+Change Net Name : Old Net Name=NetC1_20 New Net Name=IRQ
+Change Net Name : Old Net Name=NetC1_22 New Net Name=EXTON
+Added Pin To Net: NetName=CLK Pin=C1-20
+Added Pin To Net: NetName=CLK Pin=P1-3
+Added Net: Name=CLK
+Added Pin To Net: NetName=CS' Pin=C1-17
+Added Pin To Net: NetName=CS' Pin=P1-2
+Added Net: Name=CS'
+Added Member To Class: ClassName=BU01 Member=Component P3 Header 5
+Added Room: Name=BU01
